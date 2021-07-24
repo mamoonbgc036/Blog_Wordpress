@@ -38,3 +38,31 @@ function Blog_Wordpress_Enqueue_Style(){
     wp_enqueue_script('main');
 }
 add_action('wp_enqueue_scripts', 'Blog_Wordpress_Enqueue_Style');
+
+
+function blog_wordpress_sidebar(){
+    register_sidebar(
+        array(
+            'before_title' => '',
+            'after_title'  => '',
+            'before_widget'=> '<ul class="social-list list-inline py-3 mx-auto">',
+            'after_widget' => '</ul>',
+            'name'         => 'sidebar-area',
+            'id'           => 'sidebar-widget',
+            'description'  => 'sidebar-widget area'
+        )
+    );
+    register_sidebar(
+        array(
+            'before_title' => '',
+            'after_title'  => '',
+            'before_widget'=> '',
+            'after_widget' => '',
+            'name'         => 'footer-area',
+            'id'           => 'footer-widget',
+            'description'  => 'footer-widget area'
+        )
+    );
+}
+
+add_action('widgets_init', 'blog_wordpress_sidebar');

@@ -1,4 +1,4 @@
-/* Version : 3.3.6 */
+/* Version : 1.2 */
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -145,19 +145,19 @@ h6 {
     font-weight: bold
 }
 
-.header .nav-item.active .nav-link {
+.header .nav-item.active a {
     color: rgba(0, 0, 0, 0.5)
 }
 
-.header .nav-item.active .nav-link:hover {
+.header .nav-item.active a:hover {
     text-decoration: none
 }
 
-.header .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.8)
+.header .nav-item a {
+    color: rgba(255, 255, 255, 0.8)!important
 }
 
-.header .nav-item .nav-link:hover {
+.header .nav-item a:hover {
     text-decoration: underline;
     color: rgba(0, 0, 0, 0.6)
 }
